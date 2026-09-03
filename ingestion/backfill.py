@@ -65,6 +65,7 @@ def get_total_count():
 
 def fetch_page(offset):
     """Request one page of records from the ArcGIS API."""
+    # Build the query parameters for this page. ArcGIS uses "resultOffset" and "resultRecordCount" for pagination.
     params = {
         "f": "json",
         "where": "1=1",
